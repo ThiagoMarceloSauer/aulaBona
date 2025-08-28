@@ -6,6 +6,15 @@
 
         <title>Laravel</title>
 
+          @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+          <div>
+             class="p-5 mb-4 bg-white rounded-3 shadow-sm">
+             <button class="btn btn-primary btn-lg" type="button">
+                botão de exemplo
+             </button>
+          </div>
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />

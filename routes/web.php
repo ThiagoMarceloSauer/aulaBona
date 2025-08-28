@@ -2,6 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', [HomeController::class, 'home'])->name('index');
+Route::prefix('/admin')->group(function(){
+    route::get('/login', [AdminController::class, 'admin'])->name('admin');
+});
+
+
+
+
+Route::get('/', [ProdutoController::class, 'lista'])->name();
+
 Route::get('/', function () {
     return 'Home';
 })->name('index');
