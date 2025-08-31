@@ -1,65 +1,24 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\AdminController;
 
-Route::get('/', [HomeController::class, 'home'])->name('index');
-Route::prefix('/admin')->group(function(){
-    route::get('/login', [AdminController::class, 'admin'])->name('admin');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/sobre', [HomeController::class, 'sobre'])->name('sobre');
+Route::get('/login', [HomeController::class, 'login'])->name('login');
+Route::get('/cadastro', [HomeController::class, 'cadastro'])->name('cadastro');
 
+Route::get('/produtos', [ProdutoController::class, 'index'])->name('produtos.index');
+Route::get('/produtos/{id}/{nome?}/{categoria?}', [ProdutoController::class, 'show'])->name('produtos.show');
 
+Route::prefix('admin')->group(function () {
+    Route::get('/login', [AdminController::class, 'login'])->name('admin.login');
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
-
-Route::get('/', [ProdutoController::class, 'lista'])->name();
-
-Route::get('/', function () {
-    return 'Home';
-})->name('index');
-
-route::get('/produtos', function(){
-    return 'Produtos';
-});
-
-route::get(
-    '/produtos/{produto_id}/{nome}/{categoria}',
-    function(
-        int $produto_id,
-        string $nome,
-        string $categoria)
-        { echo ' Id_produto: ' . $produto_id. ' Nome: ' . $nome. ' Categoria: ' . $categoria; 
-    })->where('produto_id','[0+9]+');
-
-route::get('/cadastro', function(){
-    echo 'cadastrar';
-});
-
-route::get('/login', function(){
-    echo 'login';
-});
-
-route::get('/sobre', function(){
-    
-    echo 'sobre';
-})->name('sobre');
-
-route::get('/contato', function(){});
-
-route::prefix('admin')->group(function(){
-    route::get('/login',function(){
-        echo 'login adm';
+    Route::prefix('clientes')->group(function () {
+        Route::get('/', [AdminController::class, 'clientes'])->name('admin.clientes.index');
+        Route::get('/{id}', [AdminController::class, 'clienteShow'])->name('admin.clientes.show');
     });
-    route::get('/dashbord', function(){
-        echo 'painel principal';
-    })->name('admin.dashbord');
-    route::get('/clientes', function(
-        int $id_cliente){
-        echo 'lista de clientes';
-    })->where('id_cliente','[0+9]+');
-    route::get('/fornecedores',function(){
-        echo 'lista de fornecedores';
-    });
-    route::get('/produtos/{slug}',function(){
-        echo 'lista de produtos cadastrados';
-    })->where('slug','[A-Za-z0-9\-]+');
-
 });

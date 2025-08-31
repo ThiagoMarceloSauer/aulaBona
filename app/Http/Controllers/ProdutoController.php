@@ -6,5 +6,17 @@ use Illuminate\Http\Request;
 
 class ProdutoController extends Controller
 {
-    //
+    public function index()
+    {
+        return view('pages.produtos.index');
+    }
+
+    public function show($id, $nome = null, $categoria = null)
+    {
+        return view('pages.produtos.show', [
+            'id' => $id,
+            'nome' => $nome,
+            'categoria' => $categoria
+        ]);
+    }
 }
