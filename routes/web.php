@@ -5,13 +5,18 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\AdminController;
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'home'])->name('home');
+
 Route::get('/sobre', [HomeController::class, 'sobre'])->name('sobre');
 Route::get('/login', [HomeController::class, 'login'])->name('login');
 Route::get('/cadastro', [HomeController::class, 'cadastro'])->name('cadastro');
 
 Route::get('/produtos', [ProdutoController::class, 'index'])->name('produtos.index');
 Route::get('/produtos/{id}/{nome?}/{categoria?}', [ProdutoController::class, 'show'])->name('produtos.show');
+
+Route::get('/test', function () {
+    return 'Route is working!';
+});
 
 Route::prefix('admin')->group(function () {
     Route::get('/login', [AdminController::class, 'login'])->name('admin.login');
