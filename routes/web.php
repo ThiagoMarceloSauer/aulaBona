@@ -14,9 +14,9 @@ Route::get('/cadastro', [HomeController::class, 'cadastro'])->name('cadastro');
 Route::get('/produtos', [ProdutoController::class, 'index'])->name('produtos.index');
 Route::get('/produtos/{id}/{nome?}/{categoria?}', [ProdutoController::class, 'show'])->name('produtos.show');
 
-Route::get('/test', function () {
+Route::get('/pedidos', [PedidosController::class, 'Pedidos'])->name('Pedidos');  
     return 'Route is working!';
-});
+
 
 Route::prefix('admin')->group(function () {
     Route::get('/login', [AdminController::class, 'login'])->name('admin.login');
