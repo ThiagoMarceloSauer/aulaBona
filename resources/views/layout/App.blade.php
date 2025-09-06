@@ -1,29 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>@yield('title', 'Gestão Empresarial')</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>@yield('title', config('app.name', 'Gestão Empresarial'))</title>
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
-
-   
-    @include('partials.navbar')
-
-   
-    <div class="p-6 m-6 bg-white rounded-2xl shadow">
-        <button class="px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-xl shadow hover:bg-blue-700">
-            Botão de exemplo
-        </button>
+<body class="bg-light d-flex flex-column min-vh-100">
+  @include('partials.navbar')
+  <main class="flex-grow-1 py-4">
+    <div class="container">
+      @yield('content')
     </div>
-
-   
-    <div class="flex-1 max-w-7xl mx-auto w-full p-6">
-        @yield('content')
-    </div>
-
-    
-    @include('partials.footer')
-
+  </main>
+  @include('partials.footer')
+  @stack('scripts')
 </body>
 </html>

@@ -1,11 +1,22 @@
-@props(['cor' => 'primary', 'texto' => 'Clique'])
+@props([
+  'href' => null,
+  'type' => 'button',
+  'variant' => 'primary',  // primary, secondary, outline-primary etc.
+  'size' => null,          // sm, lg
+])
 
-<a {{ $attributes->merge(['class' => "btn btn-$cor"]) }}>
-    {{ $texto }}
-</a>
+@php
+  $classes = 'btn';
+  $classes .= ' btn-' . $variant;
+  if ($size) $classes .= ' btn-' . $size;
+@endphp
 
-@props(['cor' => 'primary', 'texto' => 'OK', 'href' => '#'])
-
-<a href="{{ $href }}" class="btn btn-{{ $cor }}">
-    {{ $texto }}
-</a>
+@if($href)
+  <a href="{{ $href }}" {{ $attributes->merge(['class' => $classes]) }}>
+    {{ $slot }}
+  </a>
+@else
+  <button type="{{ $type }}" {{ $attributes->merge(['class' => $classes]) }}>
+    {{ $slot }}
+  </button>
+@endif

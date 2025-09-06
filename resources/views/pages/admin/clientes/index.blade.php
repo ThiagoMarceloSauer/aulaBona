@@ -1,37 +1,36 @@
 @extends('layouts.app')
 
-@section('title', 'Clientes - Admin')
+@section('title', 'Admin • Clientes')
 
 @section('content')
-    <h1>Lista de Clientes</h1>
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h2 class="mb-0">Clientes</h2>
+    
+  </div>
 
-    <table class="table table-striped mt-4">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{-- Exemplo estático (substituir depois por dados do banco) --}}
-            <tr>
-                <td>1</td>
-                <td>João Silva</td>
-                <td>joao@email.com</td>
-                <td>
-                    <a href="{{ route('admin.clientes.show', 1) }}" class="btn btn-sm btn-primary">Ver</a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Maria Oliveira</td>
-                <td>maria@email.com</td>
-                <td>
-                    <a href="{{ route('admin.clientes.show', 2) }}" class="btn btn-sm btn-primary">Ver</a>
-                </td>
-            </tr>
-        </tbody>
+  @php
+    $clientes = [
+      ['id' => 6, 'nome' => 'Bananilson', 'email' => 'gamesbananis@gmail.com'],
+      ['id' => 7, 'nome' => 'Cabacilon', 'email' => 'martutto@gmail.com'],
+    ];
+  @endphp
+
+  <div class="table-responsive bg-white rounded border">
+    <table class="table mb-0 align-middle">
+      <thead class="table-light">
+        <tr>
+          <th>#</th><th>Nome</th><th>E-mail</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach($clientes as $c)
+          <tr>
+            <td>{{ $c['id'] }}</td>
+            <td>{{ $c['nome'] }}</td>
+            <td>{{ $c['email'] }}</td>
+          </tr>
+        @endforeach
+      </tbody>
     </table>
+  </div>
 @endsection
