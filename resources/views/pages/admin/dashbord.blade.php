@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layout.app')
 
 @section('title', 'Admin • Login')
 
@@ -19,3 +19,4 @@
     </div>
   </div>
 @endsection
+

@@ -1,6 +1,6 @@
 
 
-@extends('layouts.app')
+@extends('layout.app')
 
 @section('title', 'Login Administrativo')
 

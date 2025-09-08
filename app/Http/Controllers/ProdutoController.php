@@ -11,7 +11,7 @@ class ProdutoController extends Controller
         return view('pages.produtos.index');
     }
 
-    public function show($id, $nome = null, $categoria = null)
+     public function show($id, $nome = null, $categoria = null)
     {
         return view('pages.produtos.show', [
             'id' => $id,
@@ -20,3 +20,4 @@ class ProdutoController extends Controller
         ]);
     }
 }
+

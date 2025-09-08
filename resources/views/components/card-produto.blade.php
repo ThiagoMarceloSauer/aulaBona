@@ -9,7 +9,8 @@
   <div class="card-body d-flex flex-column">
     <h5 class="card-title">{{ $titulo }}</h5>
     <div class="mt-auto">
-      <x-botao :href="$link" variant="outline-primary" class="w-100">Ver detalhes</x-botao>
+      <x-botao :href="$link" variant="outline-primary" class="w-100">Detalhes</x-botao>
     </div>
   </div>
 </div>
+

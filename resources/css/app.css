@@ -16,3 +16,9 @@ body{
     font-family: 'Figtree' , 'sans-serif';
     background-color: #f8f9fa;
 }
+
+.detalhes-font {
+    font-family: 'Courier New', monospace; 
+    font-size: 18px;                       
+    font-weight: bold;                     
+}
