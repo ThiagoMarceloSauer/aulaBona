@@ -1,36 +1,44 @@
 @extends('layout.app')
 
-@section('title', 'Admin • Clientes')
+@section('title', 'Lista de Clientes')
 
 @section('content')
-  <div class="d-flex align-items-center justify-content-between mb-3">
-    <h2 class="mb-0">Clientes</h2>
-    
-  </div>
+<h2 class="mb-4">Clientes Cadastrados</h2>
 
-  @php
-    $clientes = [
-      ['id' => 6, 'nome' => 'Bananilson', 'email' => 'gamesbananis@gmail.com'],
-      ['id' => 7, 'nome' => 'Cabacilon', 'email' => 'martutto@gmail.com'],
-    ];
-  @endphp
-
-  <div class="table-responsive bg-white rounded border">
-    <table class="table mb-0 align-middle">
-      <thead class="table-light">
+<table class="table table-striped table-hover">
+    <thead>
         <tr>
-          <th>#</th><th>Nome</th><th>E-mail</th>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>CPF</th>
+            <th>E-mail</th>
+            <th>CEP</th>
+            <th>Logradouro</th>
+            <th>Bairro</th>
+            <th>Cidade</th>
+            <th>UF</th>
         </tr>
-      </thead>
-      <tbody>
-        @foreach($clientes as $c)
-          <tr>
-            <td>{{ $c['id'] }}</td>
-            <td>{{ $c['nome'] }}</td>
-            <td>{{ $c['email'] }}</td>
-          </tr>
-        @endforeach
-      </tbody>
-    </table>
-  </div>
+    </thead>
+    <tbody>
+        @forelse($clientes as $cliente)
+        <tr>
+            <td>{{ $cliente->id }}</td>
+            <td>{{ $cliente->nome }}</td>
+            <td>{{ $cliente->sobrenome }}</td>
+            <td>{{ $cliente->cpf }}</td>
+            <td>{{ $cliente->email }}</td>
+            <td>{{ $cliente->cep }}</td>
+            <td>{{ $cliente->logradouro }}</td>
+            <td>{{ $cliente->bairro }}</td>
+            <td>{{ $cliente->cidade }}</td>
+            <td>{{ $cliente->uf }}</td>
+        </tr>
+        @empty
+        <tr>
+            <td colspan="10" class="text-center">Nenhum cliente cadastrado.</td>
+        </tr>
+        @endforelse
+    </tbody>
+</table>
 @endsection

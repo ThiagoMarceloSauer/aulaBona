@@ -4,6 +4,16 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ClienteController;
+
+Route::get('/admin/produtos/create', [ProdutoController::class, 'create'])->name('admin.produtos.create');
+Route::post('/admin/produtos', [ProdutoController::class, 'store'])->name('admin.produtos.store');
+
+Route::get('/admin/clientes', [ClienteController::class, 'index'])->name('admin.clientes.index');
+
+
+Route::post('/cadastro', [ClienteController::class, 'store']);
+
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 #Route::get('/', function () {
