@@ -1,61 +1,54 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+1 ao 4 =
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+https://www.arquivodecodigos.com.br/dicas/3778-laravel-o-que-sao-controllers-em-laravel-como-criar-seu-primeiro-controller-em-laravel-rotas-controllers-e-views.html?utm_source
+O que são Controllers em Laravel? - Como criar seu primeiro Controller em Laravel - Rotas, Controllers e Views
 
-## About Laravel
+https://laravel.com/docs/12.x/controllers?utm_source
+documentação oficial do Laravel 12.x sobre Controllers.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+https://youtu.be/suToPkp8_hw?si=KZHtPFXzvz_Cq-8S
+Laravel 12 – Creating Your First Controller Step by Step
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1:13
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Parte 2 : 1 ao 4 =
 
-## Learning Laravel
+https://youtu.be/mgCghyEC1vc?si=-40EW0HP0eZbIsL_
+Mão na Massa Laravel 10 + API ViaCep + Refatoração de Código [Parte 01]
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+16:00
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+https://viacep.com.br/exemplo/javascript/
+Documentação oficial ViaCep
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+https://youtu.be/3W3Nk-bxaIs?si=4mFzn6lYUSYfPLsn
+ APRENDA A USAR A API VIA CEP EM JAVASCRIPT DE FORMA SIMPLES
 
-## Laravel Sponsors
+0:45
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+https://youtu.be/f9kTdXf5mak?si=AbWjc_MMOionh14f
+Laravel - 040 - Tinker
+4:00
 
-### Premium Partners
+Parte 3 : 1 ao 3 =
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+https://youtu.be/mrwsvaGoj8U?si=an0niZeHeGG5vzNk
+How to access images in Laravel | Laravel For Beginners | Learn Laravel
+2:00
 
-## Contributing
+https://laravel-docs-pt-br.readthedocs.io/en/latest/eloquent/
+Definindo Atributos Guardados em um Modelo
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+https://cursos.alura.com.br/forum/topico-como-exibir-imagem-da-pasta-storage-laravel-50551
+Alura - Como exibir imagem da pasta storage laravel
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+https://laravel.com/docs/12.x/filesystem?
+Documentação oficial do Laravel sobre o sistema de arquivos e como configurar o armazenamento de arquivos.
 
-## Security Vulnerabilities
+https://www.hostinger.com/br/tutoriais/tutorial-laravel
+Hostinger - Tutorial Laravel: tudo o que você precisa saber para começar com o framework
+https://youtu.be/irqsM3lNCYg?si=rdduUshmWygeXYkS
+Display Product Details in Laravel Project | Laravel E-Ccommerce Project Tutorial
+5:00
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
