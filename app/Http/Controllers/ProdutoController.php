@@ -8,23 +8,26 @@ use Illuminate\Http\Request;
 
 class ProdutoController extends Controller
 {
-    public function index()
-    {
-        return view('pages.produtos.index');
-    }
+  
+public function index()
+{
+    $produtos = Produto::all(); 
+    return view('pages.produtos.index', compact('produtos'));
+}
 
-     public function show($id, $nome = null, $categoria = null)
-    {
-        return view('pages.produtos.show', [
-            'id' => $id,
-            'nome' => $nome,
-            'categoria' => $categoria
-        ]);
-    }
+
+public function show($id)
+{
+    
+    $produto = Produto::findOrFail($id);
+
+  
+    return view('pages.produtos.show', compact('produto'));
+}
 
      public function create()
     {
-        return view('pages.admin.produtos.create'); // criar este arquivo
+        return view('pages.admin.produtos.create'); 
     }
 
        public function store(Request $request)

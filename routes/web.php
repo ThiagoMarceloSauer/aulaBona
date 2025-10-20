@@ -6,6 +6,8 @@ use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClienteController;
 
+Route::get('/produtos/{id}', [ProdutoController::class, 'show'])->name('produtos.show');
+
 Route::get('/admin/produtos/create', [ProdutoController::class, 'create'])->name('admin.produtos.create');
 Route::post('/admin/produtos', [ProdutoController::class, 'store'])->name('admin.produtos.store');
 
